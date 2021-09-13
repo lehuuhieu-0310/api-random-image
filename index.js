@@ -1,6 +1,5 @@
 const express = require('express')
 const app = express()
-const axios = require('axios').default
 require('dotenv').config()
 
 const storeImageName = require('./model/storeImageName')
