@@ -6,7 +6,7 @@ require('dotenv').config()
 const storeImageName = require('./model/storeImageName')
 require('./db/index')()
 
-const port = process.env.PORT
+const port = process.env.PORT || 3000
 
 app.get('/', async (req, res) => {
     const image = await storeImageName.aggregate([{ $sample: { size: 1 } }])
