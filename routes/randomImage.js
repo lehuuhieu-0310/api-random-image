@@ -12,7 +12,7 @@ route.get('/:name', async (req, res) => {
         const randomItem = listImage[Math.floor(Math.random() * listImage.length)]
         res.status(200).json({ 'image_url': `${process.env.URL_IMAGE}/${name}/${randomItem.url}` })
     } catch (error) {
-        res.status(400).json({ 'error': 'Not Found' })
+        res.status(404).json({ 'error': 'Not Found' })
     }
 })
 
